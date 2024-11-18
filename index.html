@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Website for Popular Games</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            margin: 10px 0;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        .search-container button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+        .recommendation-section, .contact-section {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .recommendation-section h2, .contact-section h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #000;
+        }
+        .game-card img {
+            width: 100%;
+            height: auto;
+        }
+        .game-card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .game-card a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .game-card a:hover {
+            background-color: #0056b3;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #000;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>FAIZ OFFICIAL WEBSITE</h1>
+        <p>Download the most popular games from this platform!</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search for games..." id="searchInput">
+        <button onclick="searchGame()">Search</button>
+    </div>
+
+    <!-- Top Recommendations Section -->
+    <div class="recommendation-section">
+        <h2>Top Recommendations</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="Minecraft.jpg">
+                <h3>Minecraft</h3>
+                <a href="https://liteapks.com/minecraft.html" target="_blank">download</a>
+            </div>
+            <div class="game-card">
+                <img src="freefire.png" alt="Free Fire">
+                <h3>Free Fire</h3>
+                <a href="https://free-fire-max.en.aptoide.com/app" target="_blank">download</a>
+            </div>
+            <div class="game-card">
+                <img src="bgmi.png" alt="BGMI">
+                <h3>BGMI</h3>
+                <a href="https://pubg-mobile-tencent-games.en.aptoide.com/app" target="_blank">download</a>
+            </div>
+            <div class="game-card">
+                <img src="roblox.jpg" alt="Roblox">
+                <h3>Roblox</h3>
+                <a href="https://roblox.en.aptoide.com/app" target="_blank">download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="mailto:uhacker507@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Official Website for Popular Games. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchGame() {
+            const query = document.getElementById('searchInput').value;
+            if (query) {
+                window.open(`https://en.aptoide.com/search?query=${query}`, '_blank');
+            } else {
+                alert('Please enter a search term!');
+            }
+        }
+    </script>
+</body>
+</html>
+
+   
